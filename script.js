@@ -4,10 +4,10 @@ const totalSlides = 5;
 const slides = {
     1: `
 <div class="bg-blue-600 flex flex-col h-screen">
-    <h2 class="text-4xl font-bold text-white mb-4 px-8 pt-4">포스코그룹 임원 WX 워크샵</h2>
-    <div class="flex-grow flex items-center justify-center">
-        <div class="text-center">
-            <h1 class="text-6xl font-bold text-white mb-4">실습 프롬프트</h1>
+    <div class="flex-grow flex flex-col items-center justify-center px-8">
+        <h2 class="text-4xl font-bold text-white mb-16 text-center">포스코그룹 임원 WX 워크샵</h2>
+        <div class="text-center mb-16">
+            <h1 class="text-6xl font-bold text-white mb-8">실습 프롬프트</h1>
             <p class="text-2xl text-white">포스코그룹 임원 WX 워크샵을 위한 실습 프롬프트입니다.</p>
         </div>
     </div>
