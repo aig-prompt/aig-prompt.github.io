@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI 활용법 프레젠테이션</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Noto Sans KR', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-gray-100 font-sans">
+    <div id="app" class="flex h-screen">
+        <div id="sidebar" class="flex flex-col">
+            <button id="toggleSidebar" class="flex items-center justify-center h-12">
+                <i data-lucide="menu" class="w-6 h-6"></i>
+            </button>
+            <div id="toggleTOC" class="flex items-center justify-between px-4">
+                목차 <span id="toggleIcon">▲</span>
+            </div>
+            <ul id="slideList" class="flex-grow overflow-y-auto"></ul>
+        </div>
+        <div id="slideContainer" class="flex-1 flex flex-col justify-center items-center p-10">
+            <div id="slide" class="w-full bg-white rounded-lg shadow-xl relative overflow-hidden">
+                <!-- 슬라이드 내용은 JavaScript로 동적으로 로드됩니다 -->
+            </div>
+            <div class="navigation mt-6 space-x-4">
+                <button id="prevSlide" class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded transition duration-300">
+                    <i data-lucide="chevron-left" class="w-6 h-6"></i>
+                </button>
+                <button id="nextSlide" class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded transition duration-300">
+                    <i data-lucide="chevron-right" class="w-6 h-6"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+    <script>
+        lucide.createIcons();
+    </script>
+    <style>
+        /* 기존 스타일 유지 및 수정 */
+        #sidebar {
+            background-color: #f0f8ff;
+            color: #2c5282;
+            width: 250px;
+            transition: all 0.3s;
+            border-right: 1px solid #e2e8f0;
+        }
+
+        #sidebar.closed {
+            width: 60px;
+        }
+
+        #toggleSidebar {
+            width: 100%;
+            padding: 10px;
+            background-color: #3182ce;
+            color: white;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        #toggleSidebar:hover {
+            background-color: #2c5282;
+        }
+
+        #toggleTOC {
+            cursor: pointer;
+            padding: 10px;
+            background-color: #bee3f8;
+            text-align: center;
+            font-weight: bold;
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        #slideList {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .slide-item {
+            padding: 10px 15px;
+            border-bottom: 1px solid #e2e8f0;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            display: flex;
+            align-items: center;
+        }
+
+        .slide-item:hover {
+            background-color: #bde0fe;
+        }
+
+        .slide-number {
+            margin-right: 10px;
+            font-weight: bold;
+        }
+
+        .slide-title {
+            flex-grow: 1;
+        }
+
+        #sidebar.closed .slide-title {
+            display: none;
+        }
+
+        #sidebar.closed .slide-item {
+            justify-content: center;
+        }
+
+        #sidebar.closed .slide-item:hover .slide-title {
+            display: block;
+            position: absolute;
+            left: 60px;
+            background-color: #f0f8ff;
+            padding: 5px 10px;
+            border: 1px solid #e2e8f0;
+            border-radius: 4px;
+            white-space: nowrap;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        /* 기타 스타일 유지 */
+
+        /* 미리보기 스타일 추가 */
+        .slide-preview {
+            display: none;
+            position: absolute;
+            left: 260px; /* 사이드바 너비 + 약간의 여백 */
+            background-color: white;
+            border: 1px solid #e2e8f0;
+            border-radius: 4px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            z-index: 1000;
+            width: 300px; /* 미리보기 너비 조정 */
+            height: 200px; /* 미리보기 높이 조정 */
+            overflow: hidden;
+        }
+
+        #sidebar.closed .slide-preview {
+            left: 70px; /* 축소된 사이드바 너비 + 약간의 여백 */
+        }
+
+        .slide-item:hover .slide-preview {
+            display: block;
+        }
+
+        .slide-preview-content {
+            transform: scale(0.3); /* 미리보기 크기 조정 */
+            transform-origin: top left;
+            width: 1000px; /* 원본 슬라이드 너비 */
+            height: 667px; /* 원본 슬라이드 높이 */
+        }
+    </style>
+</body>
+</html>
