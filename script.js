@@ -1,10 +1,21 @@
 let currentSlide = 1;
-const totalSlides = 4;
+const totalSlides = 5;
 
 const slides = {
     1: `
 <div class="bg-blue-600 flex flex-col h-screen">
-    <h2 class="text-4xl font-bold text-white mb-4 px-8 pt-4">4. 분기보고서 분석</h2>
+    <h2 class="text-4xl font-bold text-white mb-4 px-8 pt-4">포스코그룹 임원 WX 워크샵</h2>
+    <div class="flex-grow flex items-center justify-center">
+        <div class="text-center">
+            <h1 class="text-6xl font-bold text-white mb-4">실습 프롬프트</h1>
+            <p class="text-2xl text-white">포스코그룹 임원 WX 워크샵을 위한 실습 프롬프트입니다.</p>
+        </div>
+    </div>
+</div>
+    `,
+    2: `
+<div class="bg-blue-600 flex flex-col h-screen">
+    <h2 class="text-4xl font-bold text-white mb-4 px-8 pt-4">분기보고서 분석</h2>
     <div class="flex-grow overflow-auto">
         <div class="space-y-6 px-8">
             <div class="bg-white p-6 rounded-lg shadow-md">
@@ -68,9 +79,9 @@ const slides = {
     </div>
 </div>
     `,
-    2: `
+    3: `
 <div class="bg-blue-600 flex flex-col h-screen">
-    <h2 class="text-4xl font-bold text-white mb-4 px-8 pt-4">3. 지속가능보고서 분석</h2>
+    <h2 class="text-4xl font-bold text-white mb-4 px-8 pt-4">지속가능보고서 분석</h2>
     <div class="flex-grow overflow-auto">
         <div class="space-y-6 px-8">
             <div class="bg-white p-6 rounded-lg shadow-md">
@@ -139,7 +150,7 @@ const slides = {
     `,
     4: `
 <div class="bg-blue-600 flex flex-col h-screen">
-    <h2 class="text-4xl font-bold text-white mb-4 px-8 pt-4">5. 분기보고서 분석 및 요약</h2>
+    <h2 class="text-4xl font-bold text-white mb-4 px-8 pt-4">분기보고서 분석 및 요약</h2>
     <div class="flex-grow overflow-auto">
         <div class="space-y-6 px-8">
             <div class="bg-white p-6 rounded-lg shadow-md">
@@ -248,7 +259,7 @@ function copyToClipboard(text, buttonElement) {
         `;
         document.body.appendChild(popup);
 
-        // 애니메이션을 위한 스타일 추가
+        // 애니메이션 위한 스타일 추가
         const style = document.createElement('style');
         style.textContent = `
             .checkmark {
