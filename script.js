@@ -189,12 +189,25 @@ function extractSlideTitle(slideContent) {
     return titleMatch ? titleMatch[1] : `슬라이드 ${i}`;
 }
 
+// 복사 버튼 이벤트 리스너 설정 함수
+function setupCopyButtons() {
+    const copyButtons = document.querySelectorAll('.copy-button');
+    copyButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            const textToCopy = button.getAttribute('data-copy-text');
+            copyToClipboard(textToCopy, button);
+        });
+    });
+}
+
+// 슬라이드 로드 함수 수정
 function loadSlide(slideNumber) {
     console.log(`Loading slide ${slideNumber}`);
     const slideContent = slides[slideNumber];
     if (slideContent) {
         document.getElementById('slide').innerHTML = slideContent;
         console.log(`Slide ${slideNumber} content loaded`);
+        setupCopyButtons(); // 슬라이드 로드 후 복사 버튼 설정
     } else {
         console.log(`Slide ${slideNumber} not found`);
         document.getElementById('slide').innerHTML = `
@@ -224,31 +237,30 @@ function copyToClipboard(text, buttonElement) {
             transform: translate(-50%, -50%);
             background-color: rgba(0, 0, 0, 0.8);
             color: white;
-            padding: 40px 80px;
-            border-radius: 20px;
-            font-size: 56px;
+            padding: 20px 40px;
+            border-radius: 10px;
+            font-size: 24px;
             z-index: 1000;
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 30px;
+            gap: 15px;
         `;
         document.body.appendChild(popup);
 
-        // 애니메이션을 위한 스타일 수정
+        // 애니메이션을 위한 스타일 추가
         const style = document.createElement('style');
         style.textContent = `
             .checkmark {
-                width: 80px;
-                height: 80px;
+                width: 40px;
+                height: 40px;
                 border-radius: 50%;
                 display: block;
                 stroke-width: 2;
                 stroke: #fff;
                 stroke-miterlimit: 10;
-                margin: 10% auto;
                 box-shadow: inset 0px 0px 0px #7ac142;
-                animation: fill .4s ease-in-out .4s forwards;
+                animation: fill .4s ease-in-out .4s forwards, scale .3s ease-in-out .9s both;
             }
             .checkmark__circle {
                 stroke-dasharray: 166;
@@ -275,6 +287,14 @@ function copyToClipboard(text, buttonElement) {
                     box-shadow: inset 0px 0px 0px 30px #7ac142;
                 }
             }
+            @keyframes scale {
+                0%, 100% {
+                    transform: none;
+                }
+                50% {
+                    transform: scale3d(1.1, 1.1, 1);
+                }
+            }
         `;
         document.head.appendChild(style);
 
@@ -293,19 +313,8 @@ function copyToClipboard(text, buttonElement) {
 document.addEventListener('DOMContentLoaded', () => {
     console.log('DOM loaded, loading initial slide');
     loadSlide(currentSlide);
-
-    // 복사 버튼 스타일 변경 및 이벤트 리스너 추가
-    const copyButtons = document.querySelectorAll('.copy-button');
-    copyButtons.forEach(button => {
-        // 버튼 스타일 변경
-        button.classList.add('text-lg', 'font-bold', 'py-3', 'px-6');
-        button.style.minWidth = '150px';
-        
-        button.addEventListener('click', () => {
-            const textToCopy = button.getAttribute('data-copy-text');
-            copyToClipboard(textToCopy, button);
-        });
-    });
+    updateSlideList(); // 목차 업데이트
+    setupCopyButtons(); // 초기 로드 시 복사 버튼 설정
 });
 
 document.getElementById('prevSlide').addEventListener('click', () => {
@@ -325,35 +334,38 @@ document.getElementById('nextSlide').addEventListener('click', () => {
 });
 
 // 슬라이드 목록 생성
-const slideList = document.getElementById('slideList');
-for (let i = 1; i <= totalSlides; i++) {
-    const li = document.createElement('li');
-    li.classList.add('slide-item');
-    
-    const numberSpan = document.createElement('span');
-    numberSpan.classList.add('slide-number');
-    numberSpan.textContent = i;
-    
-    const titleSpan = document.createElement('span');
-    titleSpan.classList.add('slide-title');
-    titleSpan.textContent = extractSlideTitle(slides[i]);
-    
-    const previewDiv = document.createElement('div');
-    previewDiv.classList.add('slide-preview');
-    const previewContent = document.createElement('div');
-    previewContent.classList.add('slide-preview-content');
-    previewContent.innerHTML = slides[i];
-    previewDiv.appendChild(previewContent);
-    
-    li.appendChild(numberSpan);
-    li.appendChild(titleSpan);
-    li.appendChild(previewDiv);
-    
-    li.addEventListener('click', () => {
-        currentSlide = i;
-        loadSlide(currentSlide);
-    });
-    slideList.appendChild(li);
+function updateSlideList() {
+    const slideList = document.getElementById('slideList');
+    slideList.innerHTML = ''; // 기존 목록 초기화
+    for (let i = 1; i <= totalSlides; i++) {
+        const li = document.createElement('li');
+        li.classList.add('slide-item');
+        
+        const numberSpan = document.createElement('span');
+        numberSpan.classList.add('slide-number');
+        numberSpan.textContent = i;
+        
+        const titleSpan = document.createElement('span');
+        titleSpan.classList.add('slide-title');
+        titleSpan.textContent = extractSlideTitle(slides[i]);
+        
+        const previewDiv = document.createElement('div');
+        previewDiv.classList.add('slide-preview');
+        const previewContent = document.createElement('div');
+        previewContent.classList.add('slide-preview-content');
+        previewContent.innerHTML = slides[i];
+        previewDiv.appendChild(previewContent);
+        
+        li.appendChild(numberSpan);
+        li.appendChild(titleSpan);
+        li.appendChild(previewDiv);
+        
+        li.addEventListener('click', () => {
+            currentSlide = i;
+            loadSlide(currentSlide);
+        });
+        slideList.appendChild(li);
+    }
 }
 
 // 사이드바 기능 등 기존 코드는 그대로 유지...
