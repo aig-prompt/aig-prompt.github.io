@@ -50,10 +50,11 @@ const slides = [
                         </div>
                     </div>
                 </div>
-
-                <div class="mt-6 text-base">
-                    <p class="bg-yellow-100 p-3 rounded-lg text-black" style="font-size: 1.25rem;">• 테슬라 로고 이미지는 <span class="font-bold">&lt;세션1&gt;</span> 폴더를 열고 첨부하세요</p>
+                <div class="mt-6 text-base flex items-center bg-yellow-100 p-3 rounded-lg">
+                    <svg class="h-6 w-6 mr-2 text-yellow-600" style="width: 3rem; height: 3rem;" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z"></path></svg>
+                    <p class="text-black" style="font-size: 1.25rem;">테슬라 로고 이미지는 <span class="font-bold">&lt;세션1&gt;</span> 폴더를 열고 첨부하세요</p>
                 </div>
+
             </div>
         </div>
     </div>
@@ -766,33 +767,84 @@ function updateSlideList() {
         
         const numberSpan = document.createElement('span');
         numberSpan.classList.add('slide-number');
-        numberSpan.textContent = i + 1;
-        numberSpan.style.fontSize = '1.5rem'; // 슬라이드 번호 폰트 크기 증가
+        numberSpan.textContent = `${i + 1}. `;
+        numberSpan.style.marginRight = '0.5rem';
         
         const titleSpan = document.createElement('span');
         titleSpan.classList.add('slide-title');
         titleSpan.textContent = extractSlideTitle(slides[i]);
-        titleSpan.style.fontSize = '1.25rem'; // 슬라이드 제목 폰트 크기 증가
-        
-        const previewDiv = document.createElement('div');
-        previewDiv.classList.add('slide-preview');
-        const previewContent = document.createElement('div');
-        previewContent.classList.add('slide-preview-content');
-        previewContent.innerHTML = slides[i];
-        previewContent.style.fontSize = '1rem'; // 미리보기 내용 폰트 크기 증가
-        previewDiv.appendChild(previewContent);
         
         li.appendChild(numberSpan);
         li.appendChild(titleSpan);
-        li.appendChild(previewDiv);
+        
+        // 현재 슬라이드 강조
+        if (i + 1 === currentSlide) {
+            li.style.fontWeight = 'bold';
+        }
         
         li.addEventListener('click', () => {
             currentSlide = i + 1;
             loadSlide(currentSlide);
+            updateSlideList(); // 목차 업데이트
         });
+        
+        // 미리보기 기능
+        let previewTimeout;
+        li.addEventListener('mouseenter', () => {
+            if (localStorage.getItem('previewEnabled') === 'true') {
+                previewTimeout = setTimeout(() => {
+                    const preview = document.createElement('div');
+                    preview.classList.add('slide-preview');
+                    preview.innerHTML = slides[i];
+                    preview.style.position = 'absolute';
+                    preview.style.left = '100%';
+                    preview.style.top = '0';
+                    preview.style.width = '300px';
+                    preview.style.height = '200px';
+                    preview.style.overflow = 'hidden';
+                    preview.style.backgroundColor = 'white';
+                    preview.style.border = '1px solid #ccc';
+                    preview.style.borderRadius = '5px';
+                    preview.style.padding = '10px';
+                    preview.style.zIndex = '1000';
+                    li.style.position = 'relative';
+                    li.appendChild(preview);
+                }, 500); // 500ms 후에 미리보기 표시
+            }
+        });
+        
+        li.addEventListener('mouseleave', () => {
+            clearTimeout(previewTimeout);
+            const preview = li.querySelector('.slide-preview');
+            if (preview) {
+                li.removeChild(preview);
+            }
+        });
+        
         slideList.appendChild(li);
     }
 }
+
+// 미리보기 토글 버튼 추가
+const togglePreviewButton = document.createElement('button');
+togglePreviewButton.textContent = '미리보기 켜기/끄기';
+togglePreviewButton.style.marginBottom = '10px';
+togglePreviewButton.addEventListener('click', () => {
+    const currentState = localStorage.getItem('previewEnabled');
+    const newState = currentState === 'true' ? 'false' : 'true';
+    localStorage.setItem('previewEnabled', newState);
+    togglePreviewButton.textContent = newState === 'true' ? '미리보기 끄기' : '미리보기 켜기';
+});
+
+// 토글 버튼을 목차 위에 추가
+const slideListContainer = document.getElementById('slideListContainer');
+slideListContainer.insertBefore(togglePreviewButton, slideListContainer.firstChild);
+
+// 초기 상태 설정
+if (!localStorage.getItem('previewEnabled')) {
+    localStorage.setItem('previewEnabled', 'true');
+}
+togglePreviewButton.textContent = localStorage.getItem('previewEnabled') === 'true' ? '미리보기 끄기' : '미리보기 켜기';
 
 // 사이드바 기능 등 기존 코드는 그대로 유지...
 
