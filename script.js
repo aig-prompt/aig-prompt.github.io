@@ -357,7 +357,7 @@ const slides = [
         `,
         `
         <div class="bg-blue-600 flex flex-col h-screen">
-            <h2 class="text-4xl font-bold text-white mb-4 px-8 pt-4" style="font-size: 2.5rem;">(불렛제거)복수의 문서 데이터 분석 프롬프트</h2>
+            <h2 class="text-4xl font-bold text-white mb-4 px-8 pt-4" style="font-size: 2.5rem;">복수의 문서 데이터 분석 프롬프트</h2>
             <div class="flex-grow overflow-auto">
                 <div class="space-y-6 px-8">
                     <div class="bg-white p-6 rounded-lg shadow-md">
@@ -365,21 +365,19 @@ const slides = [
                             <div class="flex items-stretch">
                                 <div class="flex-grow">
                                     <p class="mb-4 text-lg" style="font-size: 1.25rem;">글로벌 ESG 도전과제를 담은 차트 이미지와 포스코그룹의 ESG 리포트를 읽고 포스코 그룹에서 ESG 프로젝트를 진행할 때 필요한 인사이트를 추출해. 아래의 순서대로 진행해</p>
-                                    <ol class="list-decimal list-inside space-y-2">
-                                        <li style="font-size: 1.25rem;">Image의 내용과 수치를 텍스트로 정리한다</li>
-                                        <li style="font-size: 1.25rem;">첨부한 포스코 그룹의 문서내의 ESG 과제 내용과 매핑한다</li>
-                                        <li style="font-size: 1.25rem;">매핑된 과제에 대한 점수를 참고해서 포스코에서 우선적으로 고려해야할 과제 리스트를 추출한다.</li>
-                                        <li style="font-size: 1.25rem;">정리된 과제 리스트별로 액션플랜을 수립한다.</li>
-                                    </ol>
+                                    <p class="mb-2 text-lg" style="font-size: 1.25rem;">1. Image의 내용과 수치를 텍스트로 정리한다</p>
+                                    <p class="mb-2 text-lg" style="font-size: 1.25rem;">2. 첨부한 포스코 그룹의 문서내의 ESG 과제 내용과 매핑한다</p>
+                                    <p class="mb-2 text-lg" style="font-size: 1.25rem;">3. 매핑된 과제에 대한 점수를 참고해서 포스코에서 우선적으로 고려해야할 과제 리스트를 추출한다.</p>
+                                    <p class="mb-2 text-lg" style="font-size: 1.25rem;">4. 정리된 과제 리스트별로 액션플랜을 수립한다.</p>
                                 </div>
                                 <div class="flex-shrink-0 ml-4 h-full">
                                     <button class="copy-button px-6 py-4 rounded bg-blue-600 text-white hover:bg-blue-700 focus:ring-2 focus:ring-blue-300 focus:outline-none transition-colors duration-200 ease-in-out flex flex-col items-center justify-center h-full text-xl" style="font-size: 1.5rem; padding: 1rem 1.5rem;"
                                             data-copy-text="글로벌 ESG 도전과제를 담은 차트 이미지와 포스코그룹의 ESG 리포트를 읽고 포스코 그룹에서 ESG 프로젝트를 진행할 때 필요한 인사이트를 추출해. 아래의 순서대로 진행해
-        
-        1. Image의 내용과 수치를 텍스트로 정리한다
-        2. 첨부한 포스코 그룹의 문서내의 ESG 과제 내용과 매핑한다
-        3. 매핑된 과제에 대한 점수를 참고해서 포스코에서 우선적으로 고려해야할 과제 리스트를 추출한다.
-        4. 정리된 과제 리스트별로 액션플랜을 수립한다.">
+
+1. Image의 내용과 수치를 텍스트로 정리한다
+2. 첨부한 포스코 그룹의 문서내의 ESG 과제 내용과 매핑한다
+3. 매핑된 과제에 대한 점수를 참고해서 포스코에서 우선적으로 고려해야할 과제 리스트를 추출한다.
+4. 정리된 과제 리스트별로 액션플랜을 수립한다.">
                                         <svg class="h-10 w-10 mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" style="width: 3rem; height: 3rem;"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 5H6a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2v-1M8 5a2 2 0 002 2h2a2 2 0 002-2M8 5a2 2 0 012-2h2a2 2 0 012 2m0 0h2a2 2 0 012 2v3m2 4H10m0 0l3-3m-3 3l3 3"></path></svg>
                                         복사하기
                                     </button>
@@ -630,6 +628,7 @@ function loadSlide(slideNumber) {
         document.getElementById('slide').innerHTML = slideContent;
         console.log(`Slide ${slideNumber} content loaded`);
         setupCopyButtons(); // 슬라이드 로드 후 복사 버튼 설정
+        updateSlideList(); // 슬라이드 로드 후 목차 업데이트
     } else {
         console.log(`Slide ${slideNumber} not found`);
         document.getElementById('slide').innerHTML = `
@@ -764,6 +763,13 @@ function updateSlideList() {
         li.classList.add('slide-item');
         li.style.fontSize = '1.25rem'; // 목차 항목 폰트 크기 증가
         
+        // 현재 슬라이드 강조
+        if (i + 1 === currentSlide) {
+            li.classList.add('current-slide');
+            li.style.backgroundColor = '#e0e7ff'; // 연한 파란색 배경
+            li.style.fontWeight = 'bold';
+        }
+        
         const numberSpan = document.createElement('span');
         numberSpan.classList.add('slide-number');
         numberSpan.textContent = i + 1;
@@ -789,6 +795,7 @@ function updateSlideList() {
         li.addEventListener('click', () => {
             currentSlide = i + 1;
             loadSlide(currentSlide);
+            updateSlideList(); // 목차 업데이트
         });
         slideList.appendChild(li);
     }
