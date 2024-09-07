@@ -15,7 +15,7 @@ const slides = [
     `,
     `
 <div class="bg-blue-600 flex flex-col h-screen">
-    <h2 class="text-4xl font-bold text-white mb-4 px-8 pt-4" style="font-size: 2.5rem;">비전 + 이미지 생성</h2>
+    <h2 class="text-4xl font-bold text-white mb-4 px-8 pt-4 text-center mb-8 mt-4" style="font-size: 2.5rem;">비전 + 이미지 생성</h2>
     <div class="flex-grow overflow-auto">
         <div class="space-y-6 px-8">
             <div class="bg-white p-6 rounded-lg shadow-md">
@@ -60,7 +60,7 @@ const slides = [
 </div>
     `,
     `<div class="bg-blue-600 flex flex-col h-screen">
-    <h2 class="text-4xl font-bold text-white mb-4 px-8 pt-4" style="font-size: 2.5rem;">웹브라우징 + 데이터 분석</h2>
+    <h2 class="text-4xl font-bold text-white mb-4 px-8 pt-4 text-center mb-8 mt-4" style="font-size: 2.5rem;">웹브라우징 + 데이터 분석</h2>
     <div class="flex-grow overflow-auto">
         <div class="space-y-6 px-8">
             <div class="bg-white p-6 rounded-lg shadow-md">
@@ -110,7 +110,7 @@ const slides = [
 `,
 `
 <div class="bg-blue-600 flex flex-col h-screen">
-    <h2 class="text-4xl font-bold text-white mb-4 px-8 pt-4" style="font-size: 2.5rem;">지속가능보고서 분석</h2>
+    <h2 class="text-4xl font-bold text-white mb-4 px-8 pt-4 text-center mb-8 mt-4" style="font-size: 2.5rem;">지속가능보고서 분석</h2>
     <div class="flex-grow overflow-auto">
         <div class="space-y-6 px-8">
             <div class="bg-white p-6 rounded-lg shadow-md">
@@ -159,7 +159,7 @@ const slides = [
                         <div class="bg-blue-600 text-white rounded-full w-10 h-10 flex items-center justify-center font-bold mr-4 flex-shrink-0 self-start text-xl" style="font-size: 1.5rem; width: 3rem; height: 3rem;">3</div>
                         <div class="flex-grow">
                             <p class="mb-2 text-lg" style="font-size: 1.25rem;">각 과제별로 액션플랜을 제안하세요.<br>
-                            액션 플랜은 최소 3단계에서 최대 10단계로 제안하세요</p>
+                            액션 플랜은 ��소 3단계에서 최대 10단계로 제안하세요</p>
                         </div>
                         <div class="flex-shrink-0 ml-4 h-full">
                             <button class="copy-button px-6 py-4 rounded bg-blue-600 text-white hover:bg-blue-700 focus:ring-2 focus:ring-blue-300 focus:outline-none transition-colors duration-200 ease-in-out flex flex-col items-center justify-center h-full text-xl" style="font-size: 1.5rem; padding: 1rem 1.5rem;"
@@ -183,7 +183,7 @@ const slides = [
     `,
     `
     <div class="bg-blue-600 flex flex-col h-screen">
-        <h2 class="text-4xl font-bold text-white mb-4 px-8 pt-4" style="font-size: 2.5rem;">분기보고서 분석</h2>
+        <h2 class="text-4xl font-bold text-white mb-4 px-8 pt-4 text-center mb-8 mt-4" style="font-size: 2.5rem;">분기보고서 분석</h2>
         <div class="flex-grow overflow-auto">
             <div class="space-y-6 px-8">
                 <div class="bg-white p-6 rounded-lg shadow-md">
@@ -255,7 +255,7 @@ const slides = [
         `,
     `
 <div class="bg-blue-600 flex flex-col h-screen">
-    <h2 class="text-4xl font-bold text-white mb-4 px-8 pt-4" style="font-size: 2.5rem;">경영개선 아이디어로 PPT 생성</h2>
+    <h2 class="text-4xl font-bold text-white mb-4 px-8 pt-4 text-center mb-8 mt-4" style="font-size: 2.5rem;">경영개선 아이디어로 PPT 생성</h2>
     <div class="flex-grow overflow-auto">
         <div class="space-y-6 px-8">
             <div class="bg-white p-6 rounded-lg shadow-md">
@@ -295,7 +295,7 @@ const slides = [
     `,
     `
     <div class="bg-blue-600 flex flex-col h-screen">
-        <h2 class="text-4xl font-bold text-white mb-4 px-8 pt-4" style="font-size: 2.5rem;">탄소 배출 - 데이터 분석 프롬프트</h2>
+        <h2 class="text-4xl font-bold text-white mb-4 px-8 pt-4 text-center mb-8 mt-4" style="font-size: 2.5rem;">탄소 배출 - 데이터 분석 프롬프트</h2>
         <div class="flex-grow overflow-auto">
             <div class="space-y-6 px-8">
                 <div class="bg-white p-6 rounded-lg shadow-md">
@@ -354,7 +354,7 @@ const slides = [
         `,
         `
         <div class="bg-blue-600 flex flex-col h-screen">
-            <h2 class="text-4xl font-bold text-white mb-4 px-8 pt-4" style="font-size: 2.5rem;">복수의 문서 데이터 분석 프롬프트</h2>
+            <h2 class="text-4xl font-bold text-white mb-4 px-8 pt-4 text-center mb-8 mt-4" style="font-size: 2.5rem;">복수의 문서 데이터 분석 프롬프트</h2>
             <div class="flex-grow overflow-auto">
                 <div class="space-y-6 px-8">
                     <div class="bg-white p-6 rounded-lg shadow-md">
@@ -394,7 +394,7 @@ const slides = [
         
 `
 <div class="bg-blue-600 flex flex-col h-screen">
-    <h2 class="text-4xl font-bold text-white mb-4 px-8 pt-4" style="font-size: 2.5rem;">창의적 문제 해결을 위한 프롬프트 예시</h2>
+    <h2 class="text-4xl font-bold text-white mb-4 px-8 pt-4 text-center mb-8 mt-4" style="font-size: 2.5rem;">창의적 문제 해결을 위한 프롬프트 예시</h2>
     <div class="flex-grow overflow-auto">
         <div class="space-y-6 px-8">
             <div class="bg-white p-6 rounded-lg shadow-md">
@@ -456,7 +456,7 @@ const slides = [
     
     `
 <div class="bg-blue-600 flex flex-col h-screen">
-    <h2 class="text-4xl font-bold text-white mb-4 px-8 pt-4" style="font-size: 2.5rem;">GPTs 제작 프롬프트</h2>
+    <h2 class="text-4xl font-bold text-white mb-4 px-8 pt-4 text-center mb-8 mt-4" style="font-size: 2.5rem;">GPTs 제작 프롬프트</h2>
     <div class="flex-grow overflow-auto">
         <div class="space-y-6 px-8">
             <div class="bg-white p-6 rounded-lg shadow-md">
@@ -513,7 +513,7 @@ const slides = [
     `,
     `
 <div class="bg-blue-600 flex flex-col h-screen">
-    <h2 class="text-4xl font-bold text-white mb-4 px-8 pt-4" style="font-size: 2.5rem;">가사 작성을 위한 챗GPT 프롬프트</h2>
+    <h2 class="text-4xl font-bold text-white mb-4 px-8 pt-4 text-center mb-8 mt-4" style="font-size: 2.5rem;">가사 작성을 위한 챗GPT 프롬프트</h2>
     <div class="flex-grow overflow-auto">
         <div class="space-y-6 px-8">
             <div class="bg-white p-6 rounded-lg shadow-md">
@@ -560,7 +560,7 @@ const slides = [
     `,
     `
 <div class="bg-blue-600 flex flex-col h-screen">
-    <h2 class="text-4xl font-bold text-white mb-4 px-8 pt-4" style="font-size: 2.5rem;">Ideogram 예시 프롬프트</h2>
+    <h2 class="text-4xl font-bold text-white mb-4 px-8 pt-4 text-center mb-8 mt-4" style="font-size: 2.5rem;">Ideogram 예시 프롬프트</h2>
     <div class="flex-grow overflow-auto">
         <div class="space-y-6 px-8">
             <div class="bg-white p-6 rounded-lg shadow-md">
@@ -622,7 +622,12 @@ function loadSlide(slideNumber) {
     console.log(`Loading slide ${slideNumber}`);
     const slideContent = slides[slideNumber - 1]; // 배열은 0부터 시작하므로 1을 빼줍니다
     if (slideContent) {
-        document.getElementById('slide').innerHTML = slideContent;
+        // 여기서 제목과 본문의 여백을 늘리고 제목을 가운데 정렬합니다
+        const modifiedContent = slideContent.replace(
+            /<h2 class="(.*?)"/,
+            '<h2 class="$1 text-center mb-8 mt-4"'
+        );
+        document.getElementById('slide').innerHTML = modifiedContent;
         console.log(`Slide ${slideNumber} content loaded`);
         setupCopyButtons(); // 슬라이드 로드 후 복사 버튼 설정
         updateSlideList(); // 슬라이드 로드 후 목차 업데이트
