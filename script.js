@@ -1,5 +1,5 @@
 let currentSlide = 1;
-const totalSlides = 13;
+const totalSlides = 12;
 
 const slides = [
     `
@@ -640,6 +640,192 @@ function loadSlide(slideNumber) {
 }
 
 // 복사 기능 추가
+function copyToClipboard(text, buttonElement) {
+    navigator.clipboard.writeText(text).then(() => {
+        // 팝업 생성
+        const popup = document.createElement('div');
+        popup.innerHTML = `
+            <svg class="checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52">
+                <circle class="checkmark__circle" cx="26" cy="26" r="25" fill="none"/>
+                <path class="checkmark__check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8"/>
+            </svg>
+            <span style="font-size: 1.5rem;">복사됨!</span>
+        `;
+        popup.style.cssText = `
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: rgba(0, 0, 0, 0.8);
+            color: white;
+            padding: 20px 40px;
+            border-radius: 10px;
+            font-size: 24px;
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+        `;
+        document.body.appendChild(popup);
+
+        // 애니메이션 위한 스타일 추가
+        const style = document.createElement('style');
+        style.textContent = `
+            .checkmark {
+                width: 40px;
+                height: 40px;
+                border-radius: 50%;
+                display: block;
+                stroke-width: 2;
+                stroke: #fff;
+                stroke-miterlimit: 10;
+                box-shadow: inset 0px 0px 0px #7ac142;
+                animation: fill .4s ease-in-out .4s forwards, scale .3s ease-in-out .9s both;
+            }
+            .checkmark__circle {
+                stroke-dasharray: 166;
+                stroke-dashoffset: 166;
+                stroke-width: 2;
+                stroke-miterlimit: 10;
+                stroke: #7ac142;
+                fill: none;
+                animation: stroke 0.6s cubic-bezier(0.65, 0, 0.45, 1) forwards;
+            }
+            .checkmark__check {
+                transform-origin: 50% 50%;
+                stroke-dasharray: 48;
+                stroke-dashoffset: 48;
+                animation: stroke 0.3s cubic-bezier(0.65, 0, 0.45, 1) 0.8s forwards;
+            }
+            @keyframes stroke {
+                100% {
+                    stroke-dashoffset: 0;
+                }
+            }
+            @keyframes fill {
+                100% {
+                    box-shadow: inset 0px 0px 0px 30px #7ac142;
+                }
+            }
+            @keyframes scale {
+                0%, 100% {
+                    transform: none;
+                }
+                50% {
+                    transform: scale3d(1.1, 1.1, 1);
+                }
+            }
+        `;
+        document.head.appendChild(style);
+
+        // 2초 후 팝업 제거
+        setTimeout(() => {
+            document.body.removeChild(popup);
+            document.head.removeChild(style);
+        }, 2000);
+    }).catch(err => {
+        console.error('복사 실패:', err);
+        alert('복사에 실패했습니다.');
+    });
+}
+
+// 초기 슬라이드 로드 및 이벤트 리스너 설정
+document.addEventListener('DOMContentLoaded', () => {
+    console.log('DOM loaded, loading initial slide');
+    loadSlide(currentSlide);
+    updateSlideList(); // 목차 업데이트
+    setupCopyButtons(); // 초기 로드 시 복사 버튼 설정
+});
+
+document.getElementById('prevSlide').addEventListener('click', () => {
+    console.log('Previous slide button clicked');
+    if (currentSlide > 1) {
+        currentSlide--;
+        loadSlide(currentSlide);
+    }
+});
+
+document.getElementById('nextSlide').addEventListener('click', () => {
+    console.log('Next slide button clicked');
+    if (currentSlide < totalSlides) {
+        currentSlide++;
+        loadSlide(currentSlide);
+    }
+});
+
+// 슬라이드 목록 생성 함수 수정
+function updateSlideList() {
+    const slideList = document.getElementById('slideList');
+    slideList.innerHTML = ''; // 기존 목록 초기화
+    for (let i = 0; i < slides.length; i++) {
+        const li = document.createElement('li');
+        li.classList.add('slide-item');
+        li.style.fontSize = '1.25rem'; // 목차 항목 폰트 크기 증가
+        
+        // 현재 슬라이드 강조
+        if (i + 1 === currentSlide) {
+            li.classList.add('current-slide');
+            li.style.backgroundColor = '#e0e7ff'; // 연한 파란색 배경
+            li.style.fontWeight = 'bold';
+        }
+        
+        const numberSpan = document.createElement('span');
+        numberSpan.classList.add('slide-number');
+        numberSpan.textContent = i + 1;
+        numberSpan.style.fontSize = '1.5rem'; // 슬라이드 번호 폰트 크기 증가
+        
+        const titleSpan = document.createElement('span');
+        titleSpan.classList.add('slide-title');
+        titleSpan.textContent = extractSlideTitle(slides[i]);
+        titleSpan.style.fontSize = '1.25rem'; // 슬라이드 제목 폰트 크기 증가
+        
+        const previewDiv = document.createElement('div');
+        previewDiv.classList.add('slide-preview');
+        const previewContent = document.createElement('div');
+        previewContent.classList.add('slide-preview-content');
+        previewContent.innerHTML = slides[i];
+        previewContent.style.fontSize = '1rem'; // 미리보기 내용 폰트 크기 증가
+        previewDiv.appendChild(previewContent);
+        
+        li.appendChild(numberSpan);
+        li.appendChild(titleSpan);
+        li.appendChild(previewDiv);
+        
+        li.addEventListener('click', () => {
+            currentSlide = i + 1;
+            loadSlide(currentSlide);
+            updateSlideList(); // 목차 업데이트
+        });
+        slideList.appendChild(li);
+    }
+}
+
+// 사이드바 기능 등 기존 코드는 그대로 유지...
+
+// 사이드바 토글 기능
+document.getElementById('toggleSidebar').addEventListener('click', () => {
+    const sidebar = document.getElementById('sidebar');
+    sidebar.classList.toggle('closed');
+    if (sidebar.classList.contains('closed')) {
+        document.getElementById('toggleTOC').style.display = 'none';
+    } else {
+        document.getElementById('toggleTOC').style.display = 'flex';
+    }
+    document.getElementById('toggleSidebar').style.fontSize = '1.5rem'; // 토글 버튼 폰트 크기 증가
+});
+
+// 목차 토글 기능
+document.getElementById('toggleTOC').addEventListener('click', () => {
+    const slideList = document.getElementById('slideList');
+    slideList.classList.toggle('hidden');
+    const toggleIcon = document.getElementById('toggleIcon');
+    toggleIcon.textContent = slideList.classList.contains('hidden') ? '▼' : '▲';
+    toggleIcon.style.fontSize = '1.5rem'; // 토글 아이콘 크기 증가
+});
+
+// ... (기존 코드 유지)
+
 function copyToClipboard(text, buttonElement) {
     navigator.clipboard.writeText(text).then(() => {
         // 팝업 생성
