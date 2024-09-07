@@ -52,7 +52,7 @@ const slides = [
                 </div>
 
                 <div class="mt-6 text-base">
-                    <p>• 테슬라 로고 이미지는 &lt;세션1&gt; 폴더를 열고 첨부하세요</p>
+                    <p class="bg-yellow-100 p-3 rounded-lg text-black">• 테슬라 로고 이미지는 <span class="font-bold">&lt;세션1&gt;</span> 폴더를 열고 첨부하세요</p>
                 </div>
             </div>
         </div>
@@ -174,9 +174,9 @@ const slides = [
                     </div>
                 </div>
 
-                <div class="mt-6 text-base flex items-center">
-                    <svg class="h-6 w-6 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z"></path></svg>
-                    <p>지속가능보고서 파일은 &lt;세션2&gt; 폴더내의 포스코 홀딩스 ESG 리포트를 이용하세요</p>
+                <div class="mt-6 text-base flex items-center bg-yellow-100 p-3 rounded-lg">
+                    <svg class="h-6 w-6 mr-2 text-yellow-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z"></path></svg>
+                    <p class="text-black">지속가능보고서 파일은 <span class="font-bold">&lt;세션2&gt;</span> 폴더내의 포스코 홀딩스 ESG 리포트를 이용하세요</p>
                 </div>
             </div>
         </div>
@@ -241,8 +241,14 @@ const slides = [
                     </div>
     
                     <div class="mt-6 text-base">
-                        <p>• 분기 보고서 파일은 자사 회사 홈페이지나 공시자료를 다운로드 받아서 사용해 주세요</p>
-                        <p>• 여의치 않은 경우 &lt;세션2&gt; 폴더내의 포스코 인터내셔널 자료를 이용하셔도 좋습니다</p>
+                        <div class="flex items-center bg-yellow-100 p-3 rounded-lg">
+                            <svg class="w-6 h-6 mr-2 text-yellow-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                            <p class="text-black">분기 보고서 파일은 자사 회사 홈페이지나 공시자료를 다운로드 받아서 사용해 주세요</p>
+                        </div>
+                        <div class="flex items-center bg-yellow-100 p-3 rounded-lg mt-2">
+                            <svg class="w-6 h-6 mr-2 text-yellow-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                            <p class="text-black">여의치 않은 경우 <span class="font-bold">&lt;세션2&gt;</span> 폴더내의 포스코 인터내셔널 자료를 이용하셔도 좋습니다</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -339,9 +345,9 @@ const slides = [
                         </div>
                     </div>
     
-                    <div class="mt-6 text-base flex items-center">
-                        <svg class="h-6 w-6 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z"></path></svg>
-                        <p>세션3> '탄소 배출' 파일 첨부</p>
+                    <div class="mt-6 text-base flex items-center bg-yellow-100 p-3 rounded-lg">
+                        <svg class="h-6 w-6 mr-2 text-yellow-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z"></path></svg>
+                        <p class="text-black"><span class="font-bold">&lt;세션3&gt;</span>'KPMG 차트'이미지와 포스코홀딩스 ESG 리포트를 첨부하세요</p>
                     </div>
                 </div>
             </div>
@@ -380,9 +386,9 @@ const slides = [
                             </div>
                         </div>
         
-                        <div class="mt-6 text-base flex items-center">
-                            <svg class="h-6 w-6 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z"></path></svg>
-                            <p>&lt;세션3&gt;'KPMG 차트'이미지와 포스코홀딩스 ESG 리포트를 첨부하세요</p>
+                        <div class="mt-6 text-base flex items-center bg-yellow-100 p-3 rounded-lg">
+                            <svg class="h-6 w-6 mr-2 text-yellow-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z"></path></svg>
+                            <p class="text-black"><span class="font-bold">&lt;세션3&gt;</span>'KPMG 차트'이미지와 포스코홀딩스 ESG 리포트를 첨부하세요</p>
                         </div>
                     </div>
                 </div>
@@ -526,7 +532,7 @@ const slides = [
                             <p class="mb-2 text-lg">2.곡의 주제 : 대학 입학하는 아들을 앞날을 축복하는 아빠</p>
                             <p class="mb-2 text-lg">3.곡스타일 : 팝, 발라드</p>
                             
-                            <p class="mt-4 text-lg italic">사랑하는 사람이나 대상의 이름을 넣어 만들어 보세요</p>
+                            <p class="mt-4 text-lg italic bg-yellow-100 p-2 rounded-lg">사랑하는 사람이나 대상의 이름을 넣어 만들어 보세요</p>
                         </div>
                         <div class="flex-shrink-0 ml-4 h-full">
                             <button class="copy-button px-6 py-4 rounded bg-blue-600 text-white hover:bg-blue-700 focus:ring-2 focus:ring-blue-300 focus:outline-none transition-colors duration-200 ease-in-out flex flex-col items-center justify-center h-full text-xl"
@@ -564,7 +570,7 @@ const slides = [
                             <p class="mb-4 text-lg">섬세하고 선명한 일러스트로 그리세요.</p>
                             <p class="mb-4 text-lg">이미지 아래에는 흰색과 파란색이 섞인 티셔츠에 노란색에서 주황색, 빨간색으로 바뀌는 생생한 손글씨 글꼴로 "Super Dad"라는 단어가 적혀 있습니다.</p>
                             <p class="mb-4 text-lg">전체적인 디자인이 축제 분위기로 가족 모임이나 파티에 잘 어울리게 그려주세요</p>
-                            <p class="mt-4 text-lg italic">원하는 영어 단어를 넣어 이미지를 생성해 보세요</p>
+                            <p class="mt-4 text-lg italic bg-yellow-100 p-2 rounded-lg">원하는 영어 단어를 넣어 이미지를 생성해 보세요</p>
                         </div>
                         <div class="flex-shrink-0 ml-4 h-full">
                             <button class="copy-button px-6 py-4 rounded bg-blue-600 text-white hover:bg-blue-700 focus:ring-2 focus:ring-blue-300 focus:outline-none transition-colors duration-200 ease-in-out flex flex-col items-center justify-center h-full text-xl"
@@ -617,13 +623,13 @@ const slides = [
         </div>
     </div>
     <div class="mt-8 text-white space-y-2">
-        <div class="flex items-center">
-            <svg class="w-6 h-6 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
-            <p>분기 보고서 파일은 자사 회사 홈페이지나 공시자료를 다운로드 받아서 사용해 주세요</p>
+        <div class="flex items-center bg-yellow-100 p-3 rounded-lg">
+            <svg class="w-6 h-6 mr-2 text-yellow-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+            <p class="text-black">분기 보고서 파일은 자사 회사 홈페이지나 공시자료를 다운로드 받아서 사용해 주세요</p>
         </div>
-        <div class="flex items-center">
-            <svg class="w-6 h-6 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-            <p>여의치 않은 경우 &lt;세션2&gt; 폴더내의 포스코 인터내셔널 자료를 이용하셔도 좋습니다</p>
+        <div class="flex items-center bg-yellow-100 p-3 rounded-lg">
+            <svg class="w-6 h-6 mr-2 text-yellow-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+            <p class="text-black">여의치 않은 경우 <span class="font-bold">&lt;세션2&gt;</span> 폴더내의 포스코 인터내셔널 자료를 이용하셔도 좋습니다</p>
         </div>
     </div>
 </div>
