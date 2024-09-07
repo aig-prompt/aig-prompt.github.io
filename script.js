@@ -592,49 +592,6 @@ const slides = [
     </div>
 </div>
     `,
-    `
-<div class="bg-indigo-600 flex flex-col h-screen p-8">
-    <h2 class="text-4xl font-bold text-white mb-8">4. 분기보고서 분석</h2>
-    <div class="flex-grow space-y-8">
-        <div class="bg-white p-6 rounded-lg shadow-md">
-            <div class="flex items-start space-x-4">
-                <div class="bg-indigo-600 text-white rounded-full w-10 h-10 flex items-center justify-center font-bold flex-shrink-0 text-xl">1</div>
-                <div>
-                    <p class="text-lg mb-2">첨부한 파일은 XXX 회사의 '분기 보고서'입니다.</p>
-                    <p class="text-lg mb-4">나는 [기업명]에서 [역할]을 하는 [직책]을 맡고 있습니다. 분기 보고서를 읽고 우리 부서 관련 핵심 경영개선 이슈를 찾아 요약하세요. 아래의 표형식으로 쓰세요.</p>
-                    <div class="bg-indigo-100 p-4 rounded-lg">
-                        <p class="font-bold mb-2">#형식</p>
-                        <ul class="list-disc list-inside">
-                            <li>표는 5개의 열로 구성됩니다.</li>
-                            <li>1열부터 번호, 제목, 핵심내용, 중요도(5점 척도 별표시)</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="bg-white p-6 rounded-lg shadow-md">
-            <div class="flex items-start space-x-4">
-                <div class="bg-indigo-600 text-white rounded-full w-10 h-10 flex items-center justify-center font-bold flex-shrink-0 text-xl">2</div>
-                <div>
-                    <p class="text-lg mb-2">위 5개의 이슈를 개선하기 위한 아이디어를 제안하세요.</p>
-                    <p class="text-lg">내가 번호를 입력하면 해당 번호에 대한 해외 혁신 사례를 검색하고 우리 부서에 적합한 아이디어를 2개씩 제안하세요</p>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="mt-8 text-white space-y-2">
-        <div class="flex items-center bg-yellow-100 p-3 rounded-lg">
-            <svg class="w-6 h-6 mr-2 text-yellow-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
-            <p class="text-black">분기 보고서 파일은 자사 회사 홈페이지나 공시자료를 다운로드 받아서 사용해 주세요</p>
-        </div>
-        <div class="flex items-center bg-yellow-100 p-3 rounded-lg">
-            <svg class="w-6 h-6 mr-2 text-yellow-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-            <p class="text-black">여의치 않은 경우 <span class="font-bold">&lt;세션2&gt;</span> 폴더내의 포스코 인터내셔널 자료를 이용하셔도 좋습니다</p>
-        </div>
-    </div>
-</div>
-    `,
-
 ];
 
 // 슬라이드 제목 추출 함수
