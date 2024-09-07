@@ -298,7 +298,6 @@ const slides = [
     `
     <div class="bg-blue-600 flex flex-col h-screen">
         <h2 class="text-4xl font-bold text-white mb-4 px-8 pt-4" style="font-size: 2.5rem;">탄소 배출 - 데이터 분석 프롬프트</h2>
-        <h2 class="text-4xl font-bold text-white mb-4 px-8 pt-4">탄소 배출 - 데이터 분석 프롬프트</h2>
         <div class="flex-grow overflow-auto">
             <div class="space-y-6 px-8">
                 <div class="bg-white p-6 rounded-lg shadow-md">
