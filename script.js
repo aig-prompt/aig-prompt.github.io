@@ -83,7 +83,7 @@ const slides = [
                             </ol>
                         </div>
                         <div class="ml-4">
-                            <button class="copy-button px-6 py-4 rounded bg-blue-600 text-white hover:bg-blue-700 focus:ring-2 focus:ring-blue-300 focus:outline-none transition duration-200 ease-in-out text-xl" style="font-size: 1.5rem; padding: 1rem 1.5rem;"
+                            <button class="copy-button px-6 py-4 rounded bg-blue-600 text-white hover:bg-blue-700 focus:ring-2 focus:ring-blue-300 focus:outline-none transition-colors duration-200 ease-in-out flex flex-col items-center justify-center h-full text-xl" style="font-size: 1.5rem; padding: 1rem 1.5rem;"
                                     data-copy-text="#Role : CFA와 CFP 자격을 가진 재무분석과 투자자문 전문가
 
 #Task
@@ -96,9 +96,7 @@ const slides = [
 4. 애플의 발행 주식 수를 검색해
 5. 위 3번의 시가총액에 아래 공식을 적용해서 PER별로 향후 5년의 예상 주가를 파이썬을 이용해 라인 차트로 그려줘
 6. 애플 잉여 현금 흐름(5개년 동안의 OCF, CAPEX, OCF-CAPEX, 잉여현금흐름율)을 검색하고 표로 작성해.">
-                                <svg class="h-10 w-10 mb-2" style="width: 3rem; height: 3rem;" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 5H6a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2v-1M8 5a2 2 0 002 2h2a2 2 0 002-2M8 5a2 2 0 012-2h2a2 2 0 012 2m0 0h2a2 2 0 012 2v3m2 4H10m0 0l3-3m-3 3l3 3"></path>
-                                </svg>
+                                <svg class="h-10 w-10 mb-2" style="width: 3rem; height: 3rem;" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 5H6a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2v-1M8 5a2 2 0 002 2h2a2 2 0 002-2M8 5a2 2 0 012-2h2a2 2 0 012 2m0 0h2a2 2 0 012 2v3m2 4H10m0 0l3-3m-3 3l3 3"></path></svg>
                                 복사하기
                             </button>
                         </div>
@@ -737,21 +735,21 @@ document.addEventListener('DOMContentLoaded', () => {
     setupCopyButtons(); // 초기 로드 시 복사 버튼 설정
 });
 
-document.getElementById('prevSlide').addEventListener('click', () => {
-    console.log('Previous slide button clicked');
-    if (currentSlide > 1) {
-        currentSlide--;
-        loadSlide(currentSlide);
-    }
-});
+// document.getElementById('prevSlide').addEventListener('click', () => {
+//     console.log('Previous slide button clicked');
+//     if (currentSlide > 1) {
+//         currentSlide--;
+//         loadSlide(currentSlide);
+//     }
+// });
 
-document.getElementById('nextSlide').addEventListener('click', () => {
-    console.log('Next slide button clicked');
-    if (currentSlide < totalSlides) {
-        currentSlide++;
-        loadSlide(currentSlide);
-    }
-});
+// document.getElementById('nextSlide').addEventListener('click', () => {
+//     console.log('Next slide button clicked');
+//     if (currentSlide < totalSlides) {
+//         currentSlide++;
+//         loadSlide(currentSlide);
+//     }
+// });
 
 // 슬라이드 목록 생성 함수 수정
 function updateSlideList() {
