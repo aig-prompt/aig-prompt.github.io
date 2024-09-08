@@ -159,7 +159,7 @@ const slides = [
                         <div class="bg-blue-600 text-white rounded-full w-10 h-10 flex items-center justify-center font-bold mr-4 flex-shrink-0 self-start text-xl" style="font-size: 1.5rem; width: 3rem; height: 3rem;">3</div>
                         <div class="flex-grow">
                             <p class="mb-2 text-lg" style="font-size: 1.25rem;">각 과제별로 액션플랜을 제안하세요.<br>
-                            액션 플랜은 ��소 3단계에서 최대 10단계로 제안하세요</p>
+                            액션 플랜은 최소 3단계에서 최대 10단계로 제안하세요</p>
                         </div>
                         <div class="flex-shrink-0 ml-4 h-full">
                             <button class="copy-button px-6 py-4 rounded bg-blue-600 text-white hover:bg-blue-700 focus:ring-2 focus:ring-blue-300 focus:outline-none transition-colors duration-200 ease-in-out flex flex-col items-center justify-center h-full text-xl" style="font-size: 1.5rem; padding: 1rem 1.5rem;"
