@@ -293,68 +293,108 @@ const slides = [
     </div>
 </div>
     `,
-    `
-    <div class="bg-blue-600 flex flex-col h-screen">
-        <h2 class="text-4xl font-bold text-white mb-4 px-8 pt-4 text-center mb-8 mt-4" style="font-size: 2.5rem;">탄소 배출 - 데이터 분석 프롬프트</h2>
-        <div class="flex-grow overflow-auto">
-            <div class="space-y-6 px-8">
-                <div class="bg-white p-6 rounded-lg shadow-md">
-                    <div class="space-y-6">
-                        <div class="flex items-stretch">
-                            <div class="bg-blue-600 text-white rounded-full w-10 h-10 flex items-center justify-center font-bold mr-4 flex-shrink-0 self-start text-xl" style="font-size: 1.5rem; width: 3rem; height: 3rem;">1</div>
-                            <div class="flex-grow">
-                                <p class="mb-2 text-lg" style="font-size: 1.25rem;">이 파일을 읽고 EDA 분석을 진행해. 결과는 한글로 작성해</p>
-                            </div>
-                            <div class="flex-shrink-0 ml-4">
-                                <button class="copy-button px-6 py-4 rounded bg-blue-600 text-white hover:bg-blue-700 focus:ring-2 focus:ring-blue-300 focus:outline-none transition-colors duration-200 ease-in-out flex flex-col items-center justify-center h-full text-xl" style="font-size: 1.5rem; padding: 1rem 1.5rem;"
-                                        data-copy-text="이 파일을 읽고 EDA 분석을 진행해. 결과는 한글로 작성해">
-                                    <svg class="h-10 w-10 mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" style="width: 3rem; height: 3rem;"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 5H6a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2v-1M8 5a2 2 0 002 2h2a2 2 0 002-2M8 5a2 2 0 012-2h2a2 2 0 012 2m0 0h2a2 2 0 012 2v3m2 4H10m0 0l3-3m-3 3l3 3"></path></svg>
-                                    복사하기
-                                </button>
-                            </div>
+
+`
+<div class="bg-blue-600 flex flex-col h-screen">
+    <h2 class="text-4xl font-bold text-white mb-4 px-8 pt-4 text-center mb-8 mt-4" style="font-size: 2.5rem;">탄소 배출 - 데이터 분석 프롬프트</h2>
+    <div class="flex-grow overflow-auto">
+        <div class="space-y-6 px-8">
+            <div class="bg-white p-6 rounded-lg shadow-md">
+                <div class="space-y-6">
+                    <div class="flex items-stretch">
+                        <div class="bg-blue-600 text-white rounded-full w-10 h-10 flex items-center justify-center font-bold mr-4 flex-shrink-0 self-start text-xl" style="font-size: 1.5rem; width: 3rem; height: 3rem;">1</div>
+                        <div class="flex-grow">
+                            <p class="mb-2 text-lg" style="font-size: 1.25rem;">이 파일을 읽고 EDA 분석을 진행해. 결과는 한글로 작성해</p>
                         </div>
-    
-                        <div class="flex items-stretch">
-                            <div class="bg-blue-600 text-white rounded-full w-10 h-10 flex items-center justify-center font-bold mr-4 flex-shrink-0 self-start text-xl" style="font-size: 1.5rem; width: 3rem; height: 3rem;">2</div>
-                            <div class="flex-grow">
-                                <p class="mb-2 text-lg" style="font-size: 1.25rem;">데이터 셋에서 A기업과 B기업의 연도별 탄소배출량 감소율을 비교해줘.</p>
-                            </div>
-                            <div class="flex-shrink-0 ml-4">
-                                <button class="copy-button px-6 py-4 rounded bg-blue-600 text-white hover:bg-blue-700 focus:ring-2 focus:ring-blue-300 focus:outline-none transition-colors duration-200 ease-in-out flex flex-col items-center justify-center h-full text-xl" style="font-size: 1.5rem; padding: 1rem 1.5rem;"
-                                        data-copy-text="데이터 셋에서 A기업과 B기업의 연도별 탄소배출량 감소율을 비교해줘.">
-                                    <svg class="h-10 w-10 mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" style="width: 3rem; height: 3rem;"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 5H6a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2v-1M8 5a2 2 0 002 2h2a2 2 0 002-2M8 5a2 2 0 012-2h2a2 2 0 012 2m0 0h2a2 2 0 012 2v3m2 4H10m0 0l3-3m-3 3l3 3"></path></svg>
-                                    복사하기
-                                </button>
-                            </div>
-                        </div>
-    
-                        <div class="flex items-stretch">
-                            <div class="bg-blue-600 text-white rounded-full w-10 h-10 flex items-center justify-center font-bold mr-4 flex-shrink-0 self-start text-xl" style="font-size: 1.5rem; width: 3rem; height: 3rem;">3</div>
-                            <div class="flex-grow">
-                                <p class="mb-2 text-lg" style="font-size: 1.25rem;">위 데이터 분석 결과를 시계열 라인차트로 시각화해줘.</p>
-                            </div>
-                            <div class="flex-shrink-0 ml-4">
-                                <button class="copy-button px-6 py-4 rounded bg-blue-600 text-white hover:bg-blue-700 focus:ring-2 focus:ring-blue-300 focus:outline-none transition-colors duration-200 ease-in-out flex flex-col items-center justify-center h-full text-xl" style="font-size: 1.5rem; padding: 1rem 1.5rem;"
-                                        data-copy-text="위 데이터 분석 결과를 시계열 라인차트로 시각화해줘.">
-                                    <svg class="h-10 w-10 mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" style="width: 3rem; height: 3rem;"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 5H6a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2v-1M8 5a2 2 0 002 2h2a2 2 0 002-2M8 5a2 2 0 012-2h2a2 2 0 012 2m0 0h2a2 2 0 012 2v3m2 4H10m0 0l3-3m-3 3l3 3"></path></svg>
-                                    복사하기
-                                </button>
-                            </div>
+                        <div class="flex-shrink-0 ml-4">
+                            <button class="copy-button px-6 py-4 rounded bg-blue-600 text-white hover:bg-blue-700 focus:ring-2 focus:ring-blue-300 focus:outline-none transition-colors duration-200 ease-in-out flex flex-col items-center justify-center h-full text-xl" style="font-size: 1.5rem; padding: 1rem 1.5rem;"
+                                    data-copy-text="이 파일을 읽고 EDA 분석을 진행해. 결과는 한글로 작성해">
+                                <svg class="h-10 w-10 mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" style="width: 3rem; height: 3rem;"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 5H6a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2v-1M8 5a2 2 0 002 2h2a2 2 0 002-2M8 5a2 2 0 012-2h2a2 2 0 012 2m0 0h2a2 2 0 012 2v3m2 4H10m0 0l3-3m-3 3l3 3"></path></svg>
+                                복사하기
+                            </button>
                         </div>
                     </div>
-    
-                    <div class="mt-6 text-base flex items-center bg-yellow-100 p-3 rounded-lg">
-                        <svg class="h-6 w-6 mr-2 text-yellow-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" style="width: 3rem; height: 3rem;"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z"></path></svg>
-                        <p class="text-black" style="font-size: 1.25rem;"><span class="font-bold" style="font-size: 1.5rem;">&lt;세션3&gt;</span>'KPMG 차트'이미지와 포스코홀딩스 ESG 리포트를 첨부하세요</p>
+
+                    <div class="flex items-stretch">
+                        <div class="bg-blue-600 text-white rounded-full w-10 h-10 flex items-center justify-center font-bold mr-4 flex-shrink-0 self-start text-xl" style="font-size: 1.5rem; width: 3rem; height: 3rem;">2</div>
+                        <div class="flex-grow">
+                            <p class="mb-2 text-lg" style="font-size: 1.25rem;">데이터셋에 있는 기업들 중 데이터가 가장 많은 기업 순으로 5개만 알려 줘.</p>
+                        </div>
+                        <div class="flex-shrink-0 ml-4">
+                            <button class="copy-button px-6 py-4 rounded bg-blue-600 text-white hover:bg-blue-700 focus:ring-2 focus:ring-blue-300 focus:outline-none transition-colors duration-200 ease-in-out flex flex-col items-center justify-center h-full text-xl" style="font-size: 1.5rem; padding: 1rem 1.5rem;"
+                                    data-copy-text="데이터셋에 있는 기업들 중 데이터가 가장 많은 기업 순으로 5개만 알려 줘.">
+                                <svg class="h-10 w-10 mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" style="width: 3rem; height: 3rem;"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 5H6a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2v-1M8 5a2 2 0 002 2h2a2 2 0 002-2M8 5a2 2 0 012-2h2a2 2 0 012 2m0 0h2a2 2 0 012 2v3m2 4H10m0 0l3-3m-3 3l3 3"></path></svg>
+                                복사하기
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="flex items-stretch">
+                        <div class="bg-blue-600 text-white rounded-full w-10 h-10 flex items-center justify-center font-bold mr-4 flex-shrink-0 self-start text-xl" style="font-size: 1.5rem; width: 3rem; height: 3rem;">3</div>
+                        <div class="flex-grow">
+                            <p class="mb-2 text-lg" style="font-size: 1.25rem;">데이터 셋에서 A 기업과 B기업의 연도별 탄소배출량 감소율을 비교하는 시계열 라인 차트를 그려줘</p>
+                        </div>
+                        <div class="flex-shrink-0 ml-4">
+                            <button class="copy-button px-6 py-4 rounded bg-blue-600 text-white hover:bg-blue-700 focus:ring-2 focus:ring-blue-300 focus:outline-none transition-colors duration-200 ease-in-out flex flex-col items-center justify-center h-full text-xl" style="font-size: 1.5rem; padding: 1rem 1.5rem;"
+                                    data-copy-text="데이터 셋에서 A 기업과 B기업의 연도별 탄소배출량 감소율을 비교하는 시계열 라인 차트를 그려줘">
+                                <svg class="h-10 w-10 mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" style="width: 3rem; height: 3rem;"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 5H6a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2v-1M8 5a2 2 0 002 2h2a2 2 0 002-2M8 5a2 2 0 012-2h2a2 2 0 012 2m0 0h2a2 2 0 012 2v3m2 4H10m0 0l3-3m-3 3l3 3"></path></svg>
+                                복사하기
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="flex items-stretch">
+                        <div class="bg-blue-600 text-white rounded-full w-10 h-10 flex items-center justify-center font-bold mr-4 flex-shrink-0 self-start text-xl" style="font-size: 1.5rem; width: 3rem; height: 3rem;">4</div>
+                        <div class="flex-grow">
+                            <p class="mb-2 text-lg" style="font-size: 1.25rem;">어떤 변수가 탄소배출량 감소에 많은 영향을 미쳤는지 데이터 분석을 통해 요인을 찾아 봐.</p>
+                        </div>
+                        <div class="flex-shrink-0 ml-4">
+                            <button class="copy-button px-6 py-4 rounded bg-blue-600 text-white hover:bg-blue-700 focus:ring-2 focus:ring-blue-300 focus:outline-none transition-colors duration-200 ease-in-out flex flex-col items-center justify-center h-full text-xl" style="font-size: 1.5rem; padding: 1rem 1.5rem;"
+                                    data-copy-text="어떤 변수가 탄소배출량 감소에 많은 영향을 미쳤는지 데이터 분석을 통해 요인을 찾아 봐.">
+                                <svg class="h-10 w-10 mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" style="width: 3rem; height: 3rem;"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 5H6a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2v-1M8 5a2 2 0 002 2h2a2 2 0 002-2M8 5a2 2 0 012-2h2a2 2 0 012 2m0 0h2a2 2 0 012 2v3m2 4H10m0 0l3-3m-3 3l3 3"></path></svg>
+                                복사하기
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="flex items-stretch">
+                        <div class="bg-blue-600 text-white rounded-full w-10 h-10 flex items-center justify-center font-bold mr-4 flex-shrink-0 self-start text-xl" style="font-size: 1.5rem; width: 3rem; height: 3rem;">5</div>
+                        <div class="flex-grow">
+                            <p class="mb-2 text-lg" style="font-size: 1.25rem;">요인들의 상관관계를 눈으로 보고 싶어. 히트맵이나 산점도로 표현해 줘.</p>
+                        </div>
+                        <div class="flex-shrink-0 ml-4">
+                            <button class="copy-button px-6 py-4 rounded bg-blue-600 text-white hover:bg-blue-700 focus:ring-2 focus:ring-blue-300 focus:outline-none transition-colors duration-200 ease-in-out flex flex-col items-center justify-center h-full text-xl" style="font-size: 1.5rem; padding: 1rem 1.5rem;"
+                                    data-copy-text="요인들의 상관관계를 눈으로 보고 싶어. 히트맵이나 산점도로 표현해 줘.">
+                                <svg class="h-10 w-10 mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" style="width: 3rem; height: 3rem;"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 5H6a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2v-1M8 5a2 2 0 002 2h2a2 2 0 002-2M8 5a2 2 0 012-2h2a2 2 0 012 2m0 0h2a2 2 0 012 2v3m2 4H10m0 0l3-3m-3 3l3 3"></path></svg>
+                                복사하기
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="flex items-stretch">
+                        <div class="bg-blue-600 text-white rounded-full w-10 h-10 flex items-center justify-center font-bold mr-4 flex-shrink-0 self-start text-xl" style="font-size: 1.5rem; width: 3rem; height: 3rem;">6</div>
+                        <div class="flex-grow">
+                            <p class="mb-2 text-lg" style="font-size: 1.25rem;">포스코그룹이 탄소배출량을 줄이기 위해서는 어떤 노력을 하는 게 좋을지 이 데이터에서 인사이트를 찾아 5가지로 제안해줘</p>
+                        </div>
+                        <div class="flex-shrink-0 ml-4">
+                            <button class="copy-button px-6 py-4 rounded bg-blue-600 text-white hover:bg-blue-700 focus:ring-2 focus:ring-blue-300 focus:outline-none transition-colors duration-200 ease-in-out flex flex-col items-center justify-center h-full text-xl" style="font-size: 1.5rem; padding: 1rem 1.5rem;"
+                                    data-copy-text="포스코그룹이 탄소배출량을 줄이기 위해서는 어떤 노력을 하는 게 좋을지 이 데이터에서 인사이트를 찾아 5가지로 제안해줘">
+                                <svg class="h-10 w-10 mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" style="width: 3rem; height: 3rem;"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 5H6a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2v-1M8 5a2 2 0 002 2h2a2 2 0 002-2M8 5a2 2 0 012-2h2a2 2 0 012 2m0 0h2a2 2 0 012 2v3m2 4H10m0 0l3-3m-3 3l3 3"></path></svg>
+                                복사하기
+                            </button>
+                        </div>
                     </div>
                 </div>
-            </div>
+
+        <div class="mt-6 text-base flex items-center bg-yellow-100 p-3 rounded-lg">
+            <svg class="h-6 w-6 mr-2 text-yellow-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" style="width: 3rem; height: 3rem;"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z"></path></svg>
+            <p class="text-black" style="font-size: 1.25rem;"><span class="font-bold" style="font-size: 1.5rem;">&lt;세션3&gt;</span> '탄소 배출' 파일을 첨부하세요</p>
         </div>
     </div>
-        `,
+</div>    `,
         `
         <div class="bg-blue-600 flex flex-col h-screen">
-            <h2 class="text-4xl font-bold text-white mb-4 px-8 pt-4 text-center mb-8 mt-4" style="font-size: 2.5rem;">복수의 문서 데이터 분석 프롬프트</h2>
+            <h2 class="text-4xl font-bold text-white mb-4 px-8 pt-4 text-center mb-8 mt-4" style="font-size: 2.5rem;">복수의 문서 데이터 분석</h2>
             <div class="flex-grow overflow-auto">
                 <div class="space-y-6 px-8">
                     <div class="bg-white p-6 rounded-lg shadow-md">
@@ -384,7 +424,7 @@ const slides = [
         
                         <div class="mt-6 text-base flex items-center bg-yellow-100 p-3 rounded-lg">
                             <svg class="h-6 w-6 mr-2 text-yellow-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" style="width: 3rem; height: 3rem;"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z"></path></svg>
-                            <p class="text-black" style="font-size: 1.25rem;"><span class="font-bold" style="font-size: 1.5rem;">&lt;세션3&gt;</span>'KPMG 차트'이미지와 포스코홀딩스 ESG 리포트를 첨부하세요</p>
+                            <p class="text-black" style="font-size: 1.25rem;"><span class="font-bold" style="font-size: 1.5rem;">&lt;세션3&gt;</span> 총 2개의 파일 : 'KPMG 차트'이미지와 포스코홀딩스 ESG 리포트를 첨부하세요</p>
                         </div>
                     </div>
                 </div>
@@ -456,7 +496,7 @@ const slides = [
     
     `
 <div class="bg-blue-600 flex flex-col h-screen">
-    <h2 class="text-4xl font-bold text-white mb-4 px-8 pt-4 text-center mb-8 mt-4" style="font-size: 2.5rem;">GPTs 제작 프롬프트</h2>
+    <h2 class="text-4xl font-bold text-white mb-4 px-8 pt-4 text-center mb-8 mt-4" style="font-size: 2.5rem;">GPTs 제작 - ‘지침’에 입력하세요</h2>
     <div class="flex-grow overflow-auto">
         <div class="space-y-6 px-8">
             <div class="bg-white p-6 rounded-lg shadow-md">
@@ -524,7 +564,7 @@ const slides = [
                             <p class="mb-4 text-lg" style="font-size: 1.25rem;">당신의 역할은 20년차 Kpop 작곡,작사를 하는 싱어송라이터입니다.<br>아래의 정보로 우리 가족의 행복을 기원하는 곡을 만들어 주세요.</p>
                             
                             <p class="mb-2 text-lg font-bold" style="font-size: 1.5rem;">#정보</p>
-                            <p class="mb-2 text-lg" style="font-size: 1.25rem;">1.아들 이름 : 송시윤</p>
+                            <p class="mb-2 text-lg" style="font-size: 1.25rem;">1.아들 이름 : 홍길동</p>
                             <p class="mb-2 text-lg" style="font-size: 1.25rem;">2.곡의 주제 : 대학 입학하는 아들을 앞날을 축복하는 아빠</p>
                             <p class="mb-2 text-lg" style="font-size: 1.25rem;">3.곡스타일 : 팝, 발라드</p>
                             
@@ -542,7 +582,7 @@ const slides = [
 아래의 정보로 우리 가족의 행복을 기원하는 곡을 만들어 주세요.
 
 #정보
-1.아들 이름 : 송시윤
+1.아들 이름 : 홍길동
 2.곡의 주제 : 대학 입학하는 아들을 앞날을 축복하는 아빠
 3.곡스타일 : 팝, 발라드
 
