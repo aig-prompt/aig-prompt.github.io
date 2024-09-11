@@ -600,6 +600,13 @@ const slides = [
                             </button>
                         </div>
                     </div>
+                        <!-- Suno AI 버튼 추가 -->
+                        <div class="mt-6 text-center">
+                            <a href="https://suno.ai" target="_blank" class="inline-block px-8 py-4 bg-green-500 text-white text-2xl font-bold rounded-lg hover:bg-green-600 transition-colors duration-200 ease-in-out" style="font-size: 1.5rem;">
+                                Suno AI로 이동
+                            </a>
+                        </div>
+
                 </div>
             </div>
         </div>
@@ -639,6 +646,12 @@ const slides = [
                                 복사하기
                             </button>
                         </div>
+                    </div>
+                    <!-- Ideogram 버튼 추가 -->
+                    <div class="mt-6 text-center">
+                        <a href="https://ideogram.ai" target="_blank" class="inline-block px-8 py-4 bg-green-500 text-white text-2xl font-bold rounded-lg hover:bg-green-600 transition-colors duration-200 ease-in-out" style="font-size: 1.5rem;">
+                            Ideogram으로 이동
+                        </a>
                     </div>
                 </div>
             </div>
@@ -816,7 +829,8 @@ function updateSlideList() {
     externalLinks.style.borderBottom = '1px solid #ccc';
     externalLinks.innerHTML = `
         <a href="https://gamma.app" target="_blank" style="font-size: 1.25rem; margin-right: 15px; color: #3b82f6; text-decoration: none;">Gamma</a>
-        <a href="https://suno.ai" target="_blank" style="font-size: 1.25rem; color: #3b82f6; text-decoration: none;">Suno AI</a>
+        <a href="https://suno.ai" target="_blank" style="font-size: 1.25rem; margin-right: 15px; color: #3b82f6; text-decoration: none;">Suno AI</a>
+        <a href="https://ideogram.ai" target="_blank" style="font-size: 1.25rem; color: #3b82f6; text-decoration: none;">Ideogram</a>
     `;
     slideList.appendChild(externalLinks);
 
