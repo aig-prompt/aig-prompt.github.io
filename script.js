@@ -800,6 +800,18 @@ document.addEventListener('DOMContentLoaded', () => {
 function updateSlideList() {
     const slideList = document.getElementById('slideList');
     slideList.innerHTML = ''; // 기존 목록 초기화
+
+    // Gamma와 Suno AI 링크 추가
+    const externalLinks = document.createElement('div');
+    externalLinks.classList.add('external-links');
+    externalLinks.style.padding = '10px';
+    externalLinks.style.borderBottom = '1px solid #ccc';
+    externalLinks.innerHTML = `
+        <a href="https://gamma.app" target="_blank" style="font-size: 1.25rem; margin-right: 15px; color: #3b82f6; text-decoration: none;">Gamma</a>
+        <a href="https://suno.ai" target="_blank" style="font-size: 1.25rem; color: #3b82f6; text-decoration: none;">Suno AI</a>
+    `;
+    slideList.appendChild(externalLinks);
+
     for (let i = 0; i < slides.length; i++) {
         const li = document.createElement('li');
         li.classList.add('slide-item');
@@ -986,6 +998,18 @@ document.getElementById('nextSlide').addEventListener('click', () => {
 function updateSlideList() {
     const slideList = document.getElementById('slideList');
     slideList.innerHTML = ''; // 기존 목록 초기화
+
+    // Gamma와 Suno AI 링크 추가
+    const externalLinks = document.createElement('div');
+    externalLinks.classList.add('external-links');
+    externalLinks.style.padding = '10px';
+    externalLinks.style.borderBottom = '1px solid #ccc';
+    externalLinks.innerHTML = `
+        <a href="https://gamma.app" target="_blank" style="font-size: 1.25rem; margin-right: 15px; color: #3b82f6; text-decoration: none;">Gamma</a>
+        <a href="https://suno.ai" target="_blank" style="font-size: 1.25rem; color: #3b82f6; text-decoration: none;">Suno AI</a>
+    `;
+    slideList.appendChild(externalLinks);
+
     for (let i = 0; i < slides.length; i++) {
         const li = document.createElement('li');
         li.classList.add('slide-item');
