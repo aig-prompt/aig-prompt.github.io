@@ -282,13 +282,21 @@ const slides = [
 2-6페이지 : 각 이슈별 각 2개의 개선 아이디어
 7페이지 : 기대효과
 8페이지 : 마치는 말">
-                                <svg class="h-10 w-10 mb-2" style="width: 3rem; height: 3rem;" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 5H6a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2v-1M8 5a2 2 0 002 2h2a2 2 0 002-2M8 5a2 2 0 012-2h2a2 2 0 012 2m0 0h2a2 2 0 012 2v3m2 4H10m0 0l3-3m-3 3l3 3"></path></svg>
+                                <svg class="h-10 w-10 mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" style="width: 3rem; height: 3rem;"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 5H6a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2v-1M8 5a2 2 0 002 2h2a2 2 0 002-2M8 5a2 2 0 012-2h2a2 2 0 012 2m0 0h2a2 2 0 012 2v3m2 4H10m0 0l3-3m-3 3l3 3"></path></svg>
                                 복사하기
                             </button>
                         </div>
                     </div>
                 </div>
+                            <!-- 새로 추가된 감마 사이트 버튼 -->
+            <div class="mt-6 text-center">
+                <a href="https://gamma.app" target="_blank" class="inline-block px-8 py-4 bg-green-500 text-white text-2xl font-bold rounded-lg hover:bg-green-600 transition-colors duration-200 ease-in-out" style="font-size: 1.5rem;">
+                    감마 사이트로 이동
+                </a>
             </div>
+
+            </div>
+            
         </div>
     </div>
 </div>
@@ -496,7 +504,7 @@ const slides = [
     
     `
 <div class="bg-blue-600 flex flex-col h-screen">
-    <h2 class="text-4xl font-bold text-white mb-4 px-8 pt-4 text-center mb-8 mt-4" style="font-size: 2.5rem;">GPTs 제작 - ‘지침’에 입력하세요</h2>
+    <h2 class="text-4xl font-bold text-white mb-4 px-8 pt-4 text-center mb-8 mt-4" style="font-size: 2.5rem;">GPTs 제작 - '지침'에 입력하세요</h2>
     <div class="flex-grow overflow-auto">
         <div class="space-y-6 px-8">
             <div class="bg-white p-6 rounded-lg shadow-md">
