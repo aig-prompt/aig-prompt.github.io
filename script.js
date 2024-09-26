@@ -262,7 +262,7 @@ const slides = [
                 <div class="space-y-6">
                     <div class="flex items-stretch">
                         <div class="flex-grow">
-                            <p class="mb-4 text-lg" style="font-size: 1.25rem;">위 5가지 이슈에 대한 각 2개의 개선 아이디어를 7장의 슬라이드로 만들려고 합니다. 아래의 형식으로 슬라이드 아우트라인을 만드세요</p>
+                            <p class="mb-4 text-lg" style="font-size: 1.25rem;">위 5가지 이슈에 대한 각 2개의 개선 아이디어를 8장의 슬라이드로 만들려고 합니다. 아래의 형식으로 슬라이드 아우트라인을 만드세요</p>
                             <div class="bg-blue-100 p-4 rounded-lg mt-2">
                                 <p class="font-bold mb-2" style="font-size: 1.25rem;">#형식</p>
                                 <ul class="list-disc list-inside" style="font-size: 1.25rem;">
