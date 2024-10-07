@@ -275,7 +275,7 @@ const slides = [
                         </div>
                         <div class="flex-shrink-0 ml-4 h-full">
                             <button class="copy-button px-6 py-4 rounded bg-blue-600 text-white hover:bg-blue-700 focus:ring-2 focus:ring-blue-300 focus:outline-none transition-colors duration-200 ease-in-out flex flex-col items-center justify-center h-full text-xl" style="font-size: 1.5rem; padding: 1rem 1.5rem;"
-                                    data-copy-text="위 5가지 이슈에 대한 각 2개의 개선 아이디어를 7장의 슬라이드로 만들려고 합니다. 아래의 형식으로 슬라이드 아우트라인을 만드세요
+                                    data-copy-text="위 5가지 이슈에 대한 각 2개의 개선 아이디어를 8장의 슬라이드로 만들려고 합니다. 아래의 형식으로 슬라이드 아우트라인을 만드세요
 
 #형식
 1페이지 : 제목
