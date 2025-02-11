@@ -1,5 +1,5 @@
 let currentSlide = 1;
-const totalSlides = 12;
+const totalSlides = 10;
 
 const slides = [
     `
@@ -511,147 +511,68 @@ const slides = [
                 <div class="space-y-6">
                     <div class="flex items-stretch">
                         <div class="flex-grow">
-                            <p class="mb-2 text-lg font-bold" style="font-size: 1.5rem;"># Role</p>
-                            <p class="mb-4 text-lg" style="font-size: 1.25rem;">당신은 기업 분석 전문가입니다.<br>당신은 기업의 재무 정보와 뉴스를 분석하여 기업에 대한 정보를 일목요연하게 정리합니다.</p>
+                            <p class="mb-2 text-lg font-bold" style="font-size: 1.5rem;">#Role</p>
+                            <p class="mb-4 text-lg" style="font-size: 1.25rem;">당신은 기업 회의를 준비하고 운영하는 경험 많은 회의 퍼실리테이터입니다.<br>당신의 역할은 회의 주제를 분석하고, 핵심 안건을 도출하며, 논의가 효율적으로 진행될 수 있도록 회의 준비 문서를 체계적으로 구성하는 것입니다.<br><br>사용자가 제공한 회의 주제에 맞춰 다음을 포함한 완성도 높은 회의 준비 문서를 작성합니다.</p>
                             
-                            <p class="mb-2 text-lg font-bold" style="font-size: 1.5rem;"># Objective</p>
-                            <p class="mb-4 text-lg" style="font-size: 1.25rem;">사용자가 제시한 기업명에 대한 분석 보고서를 아래의 형식으로 작성해주세요.<br>가독성이 좋은 글머리를 이용하고 구성 요소별 다른 폰트 크기를 적용해 일목요연하게 작성해 주세요.</p>
+                            <p class="mb-2 text-lg font-bold" style="font-size: 1.5rem;">#문서 작성 원칙</p>
+                            <p class="mb-4 text-lg" style="font-size: 1.25rem;">명확한 목표 제시: 회의의 목적과 기대하는 성과를 구체적으로 정의합니다.<br>체계적인 구성: 논리적인 흐름을 유지하며, 항목별로 계층적 구조를 갖추어 작성합니다.<br>가독성 향상: 번호와 하이픈(-)을 활용하여 문서를 한눈에 보기 쉽게 정리합니다.</p>
                             
-                            <p class="mb-2 text-lg font-bold" style="font-size: 1.5rem;">1. 회사 개요</p>
-                            <p class="mb-2 text-lg" style="font-size: 1.25rem;">- 사업 포트폴리오에 대한 상세한 설명<br>- 최근 1년 내 회사 동향 (주요 사건, 신제품 출시 등)</p>
+                            <p class="mb-2 text-lg font-bold" style="font-size: 1.5rem;">#결과 형식</p>
+                            <p class="mb-4 text-lg" style="font-size: 1.25rem;">제목(1단계 항목): 굵게(Bold) 처리하고 폰트 크기를 가장 크게 설정<br>소제목(2단계 항목): 일반 글씨보다 크지만 제목보다는 작은 크기 적용<br>세부 항목(3단계 항목): 기본 글씨 크기 사용</p>
                             
-                            <p class="mb-2 text-lg font-bold" style="font-size: 1.5rem;">2. 산업 분석</p>
-                            <p class="mb-2 text-lg" style="font-size: 1.25rem;">- 시장 환경<br>- 주요 경쟁사 및 시장 위치<br>- 산업 동향 및 전망</p>
+                            <p class="mb-2 text-lg font-bold" style="font-size: 1.5rem;">#회의 준비 문서 형식</p>
+                            <p class="mb-2 text-lg" style="font-size: 1.25rem;">1. 회의 개요<br>회의 제목: (예: 신제품 출시 전략 논의)<br>회의 목적: (회의를 통해 달성해야 하는 목표)<br>회의 일시: (날짜 및 시간)<br>참석자: (참석 대상 및 역할)<br>회의 장소: (온라인/오프라인 여부 포함)</p>
                             
-                            <p class="mb-2 text-lg font-bold" style="font-size: 1.5rem;">3. 재무 분석</p>
-                            <p class="mb-2 text-lg" style="font-size: 1.25rem;">- 재무 상태<br>- 실적</p>
+                            <p class="mb-2 text-lg" style="font-size: 1.25rem;">2. 회의 핵심 안건<br>안건 1: (예: 시장 조사 결과 분석)<br>안건 2: (예: 마케팅 전략 수립)<br>안건 3: (예: 출시 일정 확정)</p>
+                            
+                            <p class="mb-2 text-lg" style="font-size: 1.25rem;">3. 회의 진행 절차<br>도입 (5분): 회의 목적 공유 및 참석자 소개<br>핵심 논의 (40분): 주요 안건별 논의 진행<br>결론 및 액션 아이템 정리 (10분): 주요 결정 사항 정리 및 후속 조치 논의</p>
+                            
+                            <p class="mb-2 text-lg" style="font-size: 1.25rem;">4. 예상 결정사항 및 후속 조치<br>결정 1: (예: 신제품 가격 책정)<br>결정 2: (예: 마케팅 캠페인 일정)<br>후속 조치 담당자 및 일정: (각 결정사항에 대한 담당자 지정 및 실행 일정 명시)</p>
                         </div>
                         <div class="flex-shrink-0 ml-4 h-full">
                             <button class="copy-button px-6 py-4 rounded bg-blue-600 text-white hover:bg-blue-700 focus:ring-2 focus:ring-blue-300 focus:outline-none transition-colors duration-200 ease-in-out flex flex-col items-center justify-center h-full text-xl" style="font-size: 1.5rem; padding: 1rem 1.5rem;"
-                                    data-copy-text="# Role
-당신은 기업 분석 전문가입니다.
-당신은 기업의 재무 정보와 뉴스를 분석하여 기업에 대한 정보를 일목요연하게 정리합니다.
+                                    data-copy-text="#Role
+당신은 기업 회의를 준비하고 운영하는 경험 많은 회의 퍼실리테이터입니다.
+당신의 역할은 회의 주제를 분석하고, 핵심 안건을 도출하며, 논의가 효율적으로 진행될 수 있도록 회의 준비 문서를 체계적으로 구성하는 것입니다.
 
-# Objective
-사용자가 제시한 기업명에 대한 분석 보고서를 아래의 형식으로 작성해주세요.
-가독성이 좋은 글머리를 이용하고 구성 요소별 다른 폰트 크기를 적용해 일목요연하게 작성해 주세요.
+사용자가 제공한 회의 주제에 맞춰 다음을 포함한 완성도 높은 회의 준비 문서를 작성합니다.
 
-1. 회사 개요
-- 사업 포트폴리오에 대한 상세한 설명
-- 최근 1년 내 회사 동향 (주요 사건, 신제품 출시 등)
+#문서 작성 원칙
+명확한 목표 제시: 회의의 목적과 기대하는 성과를 구체적으로 정의합니다.
+체계적인 구성: 논리적인 흐름을 유지하며, 항목별로 계층적 구조를 갖추어 작성합니다.
+가독성 향상: 번호와 하이픈(-)을 활용하여 문서를 한눈에 보기 쉽게 정리합니다.
 
-2. 산업 분석
-- 시장 환경
-- 주요 경쟁사 및 시장 위치
-- 산업 동향 및 전망
+#결과 형식:
+제목(1단계 항목): 굵게(Bold) 처리하고 폰트 크기를 가장 크게 설정
+소제목(2단계 항목): 일반 글씨보다 크지만 제목보다는 작은 크기 적용
+세부 항목(3단계 항목): 기본 글씨 크기 사용
 
-3. 재무 분석
-- 재무 상태
-- 실적">
+#회의 준비 문서 형식
+1. 회의 개요
+회의 제목: (예: 신제품 출시 전략 논의)
+회의 목적: (회의를 통해 달성해야 하는 목표)
+회의 일시: (날짜 및 시간)
+참석자: (참석 대상 및 역할)
+회의 장소: (온라인/오프라인 여부 포함)
+
+2. 회의 핵심 안건
+안건 1: (예: 시장 조사 결과 분석)
+안건 2: (예: 마케팅 전략 수립)
+안건 3: (예: 출시 일정 확정)
+
+3. 회의 진행 절차
+도입 (5분): 회의 목적 공유 및 참석자 소개
+핵심 논의 (40분): 주요 안건별 논의 진행
+결론 및 액션 아이템 정리 (10분): 주요 결정 사항 정리 및 후속 조치 논의
+
+4. 예상 결정사항 및 후속 조치
+결정 1: (예: 신제품 가격 책정)
+결정 2: (예: 마케팅 캠페인 일정)
+후속 조치 담당자 및 일정: (각 결정사항에 대한 담당자 지정 및 실행 일정 명시)">
                                 <svg class="h-10 w-10 mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" style="width: 3rem; height: 3rem;"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 5H6a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2v-1M8 5a2 2 0 002 2h2a2 2 0 002-2M8 5a2 2 0 012-2h2a2 2 0 012 2m0 0h2a2 2 0 012 2v3m2 4H10m0 0l3-3m-3 3l3 3"></path></svg>
                                 복사하기
                             </button>
                         </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-    `,
-    `
-<div class="bg-blue-600 flex flex-col h-screen">
-    <h2 class="text-4xl font-bold text-white mb-4 px-8 pt-4 text-center mb-8 mt-4" style="font-size: 2.5rem;">가사 작성을 위한 챗GPT 프롬프트</h2>
-    <div class="flex-grow overflow-auto">
-        <div class="space-y-6 px-8">
-            <div class="bg-white p-6 rounded-lg shadow-md">
-                <div class="space-y-6">
-                    <div class="flex items-stretch">
-                        <div class="flex-grow">
-                            <p class="mb-2 text-lg font-bold" style="font-size: 1.5rem;">#역할</p>
-                            <p class="mb-4 text-lg" style="font-size: 1.25rem;">당신의 역할은 20년차 Kpop 작곡,작사를 하는 싱어송라이터입니다.<br>아래의 정보로 우리 가족의 행복을 기원하는 곡을 만들어 주세요.</p>
-                            
-                            <p class="mb-2 text-lg font-bold" style="font-size: 1.5rem;">#정보</p>
-                            <p class="mb-2 text-lg" style="font-size: 1.25rem;">1.아들 이름 : 홍길동</p>
-                            <p class="mb-2 text-lg" style="font-size: 1.25rem;">2.곡의 주제 : 대학 입학하는 아들을 앞날을 축복하는 아빠</p>
-                            <p class="mb-2 text-lg" style="font-size: 1.25rem;">3.곡스타일 : 팝, 발라드</p>
-                            
-                            <p class="mt-4 text-lg italic bg-yellow-100 p-2 rounded-lg flex items-center" style="font-size: 1.25rem;">
-                                <svg class="h-6 w-6 mr-2 text-yellow-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" style="width: 2rem; height: 2rem;">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z"></path>
-                                </svg>
-                                사랑하는 사람이나 대상의 이름을 넣어 만들어 보세요
-                            </p>
-                        </div>
-                        <div class="flex-shrink-0 ml-4 h-full">
-                            <button class="copy-button px-6 py-4 rounded bg-blue-600 text-white hover:bg-blue-700 focus:ring-2 focus:ring-blue-300 focus:outline-none transition-colors duration-200 ease-in-out flex flex-col items-center justify-center h-full text-xl" style="font-size: 1.5rem; padding: 1rem 1.5rem;"
-                                    data-copy-text="#역할
-당신의 역할은 20년차 Kpop 작곡,작사를 하는 싱어송라이터입니다.
-아래의 정보로 우리 가족의 행복을 기원하는 곡을 만들어 주세요.
-
-#정보
-1.아들 이름 : 홍길동
-2.곡의 주제 : 대학 입학하는 아들을 앞날을 축복하는 아빠
-3.곡스타일 : 팝, 발라드
-
-사랑하는 사람이나 대상의 이름을 넣어 만들어 보세요">
-                                <svg class="h-10 w-10 mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" style="width: 3rem; height: 3rem;"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 5H6a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2v-1M8 5a2 2 0 002 2h2a2 2 0 002-2M8 5a2 2 0 012-2h2a2 2 0 012 2m0 0h2a2 2 0 012 2v3m2 4H10m0 0l3-3m-3 3l3 3"></path></svg>
-                                복사하기
-                            </button>
-                        </div>
-                    </div>
-                        <!-- Suno AI 버튼 추가 -->
-                        <div class="mt-6 text-center">
-                            <a href="https://suno.ai" target="_blank" class="inline-block px-8 py-4 bg-green-500 text-white text-2xl font-bold rounded-lg hover:bg-green-600 transition-colors duration-200 ease-in-out" style="font-size: 1.5rem;">
-                                Suno AI로 이동
-                            </a>
-                        </div>
-
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-    `,
-    `
-<div class="bg-blue-600 flex flex-col h-screen">
-    <h2 class="text-4xl font-bold text-white mb-4 px-8 pt-4 text-center mb-8 mt-4" style="font-size: 2.5rem;">Ideogram 예시 프롬프트</h2>
-    <div class="flex-grow overflow-auto">
-        <div class="space-y-6 px-8">
-            <div class="bg-white p-6 rounded-lg shadow-md">
-                <div class="space-y-6">
-                    <div class="flex items-stretch">
-                        <div class="flex-grow">
-                            <p class="mb-4 text-lg" style="font-size: 1.25rem;">러브 마크가 장식된 검은 뿔테 안경을 쓰고 눈을 크게 뜬 채 미소 짓는 아빠.</p>
-                            <p class="mb-4 text-lg" style="font-size: 1.25rem;">섬세하고 선명한 일러스트로 그리세요.</p>
-                            <p class="mb-4 text-lg" style="font-size: 1.25rem;">이미지 아래에는 흰색과 파란색이 섞인 티셔츠에 노란색에서 주황색, 빨간색으로 바뀌는 생생한 손글씨 글꼴로 "Super Dad"라는 단어가 적혀 있습니다.</p>
-                            <p class="mb-4 text-lg" style="font-size: 1.25rem;">전체적인 디자인이 축제 분위기로 가족 모임이나 파티에 잘 어울리게 그려주세요</p>
-                            <p class="mt-4 text-lg italic bg-yellow-100 p-2 rounded-lg flex items-center" style="font-size: 1.25rem;">
-                                <svg class="h-6 w-6 mr-2 text-yellow-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" style="width: 2rem; height: 2rem;">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
-                                </svg>
-                                원하는 영어 단어를 넣어 이미지를 생성해 보세요
-                            </p>
-                        </div>
-                        <div class="flex-shrink-0 ml-4 h-full">
-                            <button class="copy-button px-6 py-4 rounded bg-blue-600 text-white hover:bg-blue-700 focus:ring-2 focus:ring-blue-300 focus:outline-none transition-colors duration-200 ease-in-out flex flex-col items-center justify-center h-full text-xl" style="font-size: 1.5rem; padding: 1rem 1.5rem;"
-                                    data-copy-text="러브 마크가 장식된 검은 뿔테 안경을 쓰고 눈을 크게 뜬 채 미소 짓는 아빠.
-
-섬세하고 선명한 일러스트로 그리세요.
-
-이미지 아래에는 흰색과 파란색이 섞인 티셔츠에 노란색에서 주황색, 빨간색으로 바뀌는 생생한 손글씨 글꼴로 'Super Dad'라는 단어가 적혀 있습니다.
-
-전체적인 디자인이 축제 분위기로 가족 모임이나 파티에 잘 어울리게 그려주세요">
-                                <svg class="h-10 w-10 mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" style="width: 3rem; height: 3rem;"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 5H6a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2v-1M8 5a2 2 0 002 2h2a2 2 0 002-2M8 5a2 2 0 012-2h2a2 2 0 012 2m0 0h2a2 2 0 012 2v3m2 4H10m0 0l3-3m-3 3l3 3"></path></svg>
-                                복사하기
-                            </button>
-                        </div>
-                    </div>
-                    <!-- Ideogram 버튼 추가 -->
-                    <div class="mt-6 text-center">
-                        <a href="https://ideogram.ai" target="_blank" class="inline-block px-8 py-4 bg-green-500 text-white text-2xl font-bold rounded-lg hover:bg-green-600 transition-colors duration-200 ease-in-out" style="font-size: 1.5rem;">
-                            Ideogram으로 이동
-                        </a>
                     </div>
                 </div>
             </div>
