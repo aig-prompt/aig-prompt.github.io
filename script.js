@@ -750,8 +750,6 @@ function updateSlideList() {
     externalLinks.style.borderBottom = '1px solid #ccc';
     externalLinks.innerHTML = `
         <a href="https://gamma.app" target="_blank" style="font-size: 1.25rem; margin-right: 15px; color: #3b82f6; text-decoration: none;">Gamma</a>
-        <a href="https://suno.ai" target="_blank" style="font-size: 1.25rem; margin-right: 15px; color: #3b82f6; text-decoration: none;">Suno AI</a>
-        <a href="https://ideogram.ai" target="_blank" style="font-size: 1.25rem; color: #3b82f6; text-decoration: none;">Ideogram</a>
     `;
     slideList.appendChild(externalLinks);
 
@@ -949,7 +947,6 @@ function updateSlideList() {
     externalLinks.style.borderBottom = '1px solid #ccc';
     externalLinks.innerHTML = `
         <a href="https://gamma.app" target="_blank" style="font-size: 1.25rem; margin-right: 15px; color: #3b82f6; text-decoration: none;">Gamma</a>
-        <a href="https://suno.ai" target="_blank" style="font-size: 1.25rem; color: #3b82f6; text-decoration: none;">Suno AI</a>
     `;
     slideList.appendChild(externalLinks);
 
